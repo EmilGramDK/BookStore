@@ -6,7 +6,7 @@ public class Author implements AuthorInfo {
         this.authorId = authorId;
         this.name = name;
     }
-    
+
     public String getAuthorId() {
         return authorId;
     }
@@ -19,4 +19,3 @@ public class Author implements AuthorInfo {
 interface AuthorInfo {
     String getName();
 }
- 

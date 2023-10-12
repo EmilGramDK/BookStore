@@ -22,7 +22,8 @@ public class BookStore {
 
         // create test books
         Book book1 = new Book("1", "The Little Mermaid", author1, 199, 10);
-        Book book2 = new Book("2", "Harry Potter", author2, 299, 5);
+        Book book2 = new Book("2", "The Ugly Duckling", author1, 99, 20);
+        Book book3 = new Book("3", "Harry Potter", author2, 299, 5);
 
         // create test customers
         Customer customer1 = new Customer("1", "Emil Gram", "emil@gram.dk");
@@ -32,6 +33,7 @@ public class BookStore {
         addAuthor(author2);
         addBook(book1);
         addBook(book2);
+        addBook(book3);
         addCustomer(customer1);
 
     }
@@ -69,4 +71,3 @@ public class BookStore {
         return orders;
     }
 }
- 

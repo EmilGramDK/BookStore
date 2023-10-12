@@ -19,7 +19,6 @@ public class Menu {
         clearConsole();
 
         System.out.println("WELCOME TO THE BOOKSTORE");
-
         System.out.println();
 
         // select or create new customer
@@ -80,7 +79,6 @@ public class Menu {
 
         System.out.println();
 
-        // select customer
         for (Customer customer : bookstore.getAllCustomers()) {
             System.out.println(customer.getCustomerId() + ") " + customer.getName());
         }
@@ -89,6 +87,11 @@ public class Menu {
         System.out.println();
 
         String userInput = System.console().readLine();
+
+        if (userInput.equals("q")) {
+            setRunning(false);
+            return null;
+        }
 
         Customer appCustomer = null;
 
@@ -157,13 +160,14 @@ public class Menu {
 
         String userInput = System.console().readLine();
 
+        if (userInput.equals("q")) {
+            setRunning(false);
+            return;
+        }
+
         for (Book book : appCustomer.getCart()) {
             if (book.getBookId().equals(userInput)) {
                 appCustomer.getCart().remove(book);
-                break;
-            }
-            if (userInput.equals("q")) {
-                setRunning(false);
                 break;
             }
         }
@@ -189,13 +193,14 @@ public class Menu {
 
         String userInput = System.console().readLine();
 
+        if (userInput.equals("q")) {
+            setRunning(false);
+            return;
+        }
+
         for (Author author : bookstore.getAllAuthors()) {
             if (author.getAuthorId().equals(userInput)) {
                 displayAuthorBooks(author, bookstore, appCustomer);
-                break;
-            }
-            if (userInput.equals("q")) {
-                setRunning(false);
                 break;
             }
         }
@@ -223,13 +228,14 @@ public class Menu {
 
         String userInput = System.console().readLine();
 
+        if (userInput.equals("q")) {
+            setRunning(false);
+            return;
+        }
+
         for (Book book : bookstore.getAllBooks()) {
             if (book.getBookId().equals(userInput)) {
                 appCustomer.addToCart(book);
-                break;
-            }
-            if (userInput.equals("q")) {
-                setRunning(false);
                 break;
             }
         }
@@ -256,13 +262,14 @@ public class Menu {
 
         String userInput = System.console().readLine();
 
+        if (userInput.equals("q")) {
+            setRunning(false);
+            return;
+        }
+
         for (Book book : bookstore.getAllBooks()) {
             if (book.getBookId().equals(userInput)) {
                 appCustomer.addToCart(book);
-                break;
-            }
-            if (userInput.equals("q")) {
-                setRunning(false);
                 break;
             }
         }
@@ -283,8 +290,6 @@ public class Menu {
 
     public void clearConsole() {
         System.out.print("\033[H\033[2J");
-        //System.out.println("");
     }
 
 }
- 

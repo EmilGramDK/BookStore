@@ -51,9 +51,12 @@ public class Book implements BookInfo {
 
 interface BookInfo {
     String getTitle();
+
     String getAuthor();
+
     double getPrice();
+
     int getStock();
+
     void displayBookInfo();
 }
- 

@@ -41,9 +41,12 @@ public class Customer implements CustomerInfo {
 
 interface CustomerInfo {
     String getCustomerId();
+
     String getName();
+
     String getEmail();
+
     List<Book> getCart();
+
     void addToCart(Book book);
 }
- 
