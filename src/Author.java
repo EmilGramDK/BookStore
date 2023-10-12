@@ -19,3 +19,4 @@ public class Author implements AuthorInfo {
 interface AuthorInfo {
     String getName();
 }
+ 

@@ -47,3 +47,4 @@ interface OrderInfo {
     Date getOrderDate();
     double getTotalPrice();
 }
+ 
