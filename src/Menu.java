@@ -43,6 +43,7 @@ public class Menu {
                 setRunning(false);
                 break;
             default:
+                setRunning(false);
                 break;
         }
 
@@ -253,8 +254,7 @@ public class Menu {
 
         // display all books
         for (Book book : bookstore.getAllBooks()) {
-            System.out.println(book.getBookId() + ") " + book.getTitle() + " - " + book.getAuthor() + " - "
-                    + book.getPrice() + " kr.");
+            System.out.println(book.getBookInfo());
         }
         backOrQuitText(true);
 

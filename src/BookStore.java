@@ -21,9 +21,9 @@ public class BookStore {
         Author author2 = new Author("2", "J.K. Rowling");
 
         // create test books
-        Book book1 = new Book("1", "The Little Mermaid", author1, 199, 10);
-        Book book2 = new Book("2", "The Ugly Duckling", author1, 99, 20);
-        Book book3 = new Book("3", "Harry Potter", author2, 299, 5);
+        Book book1 = new EBook("1", "The Little Mermaid", author1, 199, 2);
+        Book book2 = new PaperBook("2", "The Ugly Duckling", author1, 99, 20);
+        Book book3 = new PaperBook("3", "Harry Potter", author2, 299, 5);
 
         // create test customers
         Customer customer1 = new Customer("1", "Emil Gram", "emil@gram.dk");
