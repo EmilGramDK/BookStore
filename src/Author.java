@@ -1,4 +1,4 @@
-public class Author implements AuthorInfo {
+public class Author {
     private String authorId;
     private String name;
 
@@ -14,8 +14,4 @@ public class Author implements AuthorInfo {
     public String getName() {
         return name;
     }
-}
-
-interface AuthorInfo {
-    String getName();
 }

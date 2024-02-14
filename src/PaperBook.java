@@ -11,6 +11,14 @@ public class PaperBook extends Book {
         return super.getBookInfo() + " | (PaperBook [" + stock + " in stock])";
     }
 
+    public boolean isInStock() {
+        return stock > 0;
+    }
+
+    public void decreaseStock() {
+        stock--;
+    }
+
     public int getStock() {
         return stock;
     }

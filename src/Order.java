@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.List;
 
-public class Order implements OrderInfo {
+public class Order {
     private String orderId;
     private Customer customer;
     private List<Book> items;
@@ -11,10 +11,9 @@ public class Order implements OrderInfo {
         this.orderId = orderId;
         this.customer = customer;
         this.items = items;
-        this.orderDate = new Date(); // Automatically set the order date to the current date
+        this.orderDate = new Date();
     }
-
-    // Getters for the fields
+    
     public String getOrderId() {
         return orderId;
     }
@@ -39,12 +38,3 @@ public class Order implements OrderInfo {
         return totalPrice;
     }
 }
-
-interface OrderInfo {
-    String getOrderId();
-    Customer getCustomer();
-    List<Book> getItems();
-    Date getOrderDate();
-    double getTotalPrice();
-}
- 

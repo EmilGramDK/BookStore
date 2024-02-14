@@ -1,5 +1,5 @@
 public class EBook extends Book {
-    private double fileSize; // size in MB
+    private double fileSize; 
 
     public EBook(String bookId, String title, Author author, double price, double fileSize) {
         super(bookId, title, author, price);

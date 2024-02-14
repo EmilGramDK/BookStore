@@ -5,4 +5,8 @@ interface BookInfo {
 
     double getPrice();
 
+    String getBookInfo();
+
+    String getBookId();
+
 }

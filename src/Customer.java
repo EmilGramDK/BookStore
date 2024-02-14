@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer implements CustomerInfo {
+public class Customer {
     private String customerId;
     private String name;
     private String email;
@@ -12,10 +12,6 @@ public class Customer implements CustomerInfo {
         this.name = name;
         this.email = email;
         this.cart = new ArrayList<>();
-    }
-
-    public Customer createCustomer(String customerId, String name, String email) {
-        return new Customer(customerId, name, email);
     }
 
     public String getCustomerId() {
@@ -37,16 +33,4 @@ public class Customer implements CustomerInfo {
     public void addToCart(Book book) {
         cart.add(book);
     }
-}
-
-interface CustomerInfo {
-    String getCustomerId();
-
-    String getName();
-
-    String getEmail();
-
-    List<Book> getCart();
-
-    void addToCart(Book book);
 }

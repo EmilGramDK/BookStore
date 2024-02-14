@@ -17,7 +17,6 @@ public class App {
             if (appCustomer == null) {
                 appCustomer = menu.displayStartScreen(bookstore);
                 bookstore.addCustomer(appCustomer);
-                continue;
             }
 
             // display the main menu
